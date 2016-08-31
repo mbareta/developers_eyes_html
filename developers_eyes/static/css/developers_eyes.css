@@ -1,0 +1,9 @@
+/* CSS for DevelopersEyesXBlock */
+
+.developers_eyes_block .count {
+    font-weight: bold;
+}
+
+.developers_eyes_block p {
+    cursor: pointer;
+}
