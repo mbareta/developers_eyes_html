@@ -55,6 +55,26 @@ class DevelopersEyesXBlock(XBlock):
         frag.initialize_js('DevelopersEyesXBlock')
         return frag
 
+    def studio_view(self, context):
+        """
+        Create a fragment used to display the edit view in the Studio.
+        """
+        html_str = pkg_resources.resource_string(__name__, "static/html/studio_view.html")
+        frag = Fragment(unicode(html_str).format(display_name=self.display_name))
+        js_str = pkg_resources.resource_string(__name__, "static/js/src/studio_edit.js")
+        frag.add_javascript(unicode(js_str))
+        frag.initialize_js('StudioEdit')
+        return frag
+
+    @XBlock.json_handler
+    def studio_submit(self, data, suffix=''):
+        """
+        Called when submitting the form in Studio.
+        """
+        self.display_name = data.get('display_name')
+
+        return {'result': 'success'}
+
     # TO-DO: change this to create the scenarios you'd like to see in the
     # workbench while developing your XBlock.
     @staticmethod
