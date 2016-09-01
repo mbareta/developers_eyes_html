@@ -1,22 +1,26 @@
 /* Javascript for DevelopersEyesXBlock. */
 function DevelopersEyesXBlock(runtime, element) {
+    $('a').on('click', function() {
+        var id = this.id;
+        zoom.to({element: this, callback: function(){
+          $('#'+id+'Content').fadeIn();
 
-    function updateCount(result) {
-        $('.count', element).text(result.count);
-    }
+          if(id === 'goodBones') {
+            $("#twentytwenty").twentytwenty();
+          }
+          else if(id === 'placemakingPotential') {
+            PhotoSphereViewer({
+              container: document.getElementById('panoContainer'),
+              panorama: 'http://localhost:8000/asset-v1:mitX+MITBE001+2017_T1+type@asset+block@pano.jpg',
+              mousemove: false,
+              mousewheel: false
+            });
+          }
+        }});
+      });
 
-    var handlerUrl = runtime.handlerUrl(element, 'increment_count');
-
-    $('p', element).click(function(eventObject) {
-        $.ajax({
-            type: "POST",
-            url: handlerUrl,
-            data: JSON.stringify({"hello": "world"}),
-            success: updateCount
-        });
-    });
-
-    $(function ($) {
-        /* Here's where you'd do things on page load. */
-    });
+      $('.back-to-aerial-view').on('click', function(){
+        $('.developerEyesContent').fadeOut();
+        zoom.out();
+      });
 }

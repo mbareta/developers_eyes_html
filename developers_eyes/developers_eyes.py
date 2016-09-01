@@ -3,7 +3,7 @@
 import pkg_resources
 
 from xblock.core import XBlock
-from xblock.fields import Scope, Integer
+from xblock.fields import Scope, String
 from xblock.fragment import Fragment
 
 
@@ -16,9 +16,9 @@ class DevelopersEyesXBlock(XBlock):
     # self.<fieldname>.
 
     # TO-DO: delete count, and define your own fields.
-    count = Integer(
-        default=0, scope=Scope.user_state,
-        help="A simple counter, to show something happening",
+    xlsx_url = String(
+        default=None, scope=Scope.user_state,
+        help="URL to XLSX document with chart data",
     )
 
     def resource_string(self, path):
@@ -34,23 +34,26 @@ class DevelopersEyesXBlock(XBlock):
         """
         html = self.resource_string("static/html/developers_eyes.html")
         frag = Fragment(html.format(self=self))
-        frag.add_css(self.resource_string("static/css/developers_eyes.css"))
+        frag.add_css_url(
+            self.runtime.local_resource_url(
+                self, 'public/css/twentytwenty.css'))
+        frag.add_css_url(
+            self.runtime.local_resource_url(
+                self, 'public/css/photo-sphere-viewer.css'))
+        frag.add_css_url(
+            self.runtime.local_resource_url(
+                self, 'public/css/developers_eyes.css'))
+        frag.add_javascript(self.resource_string("static/js/lib/zoom.js"))
+        frag.add_javascript(self.resource_string("static/js/lib/jquery.event.move.js"))
+        frag.add_javascript(self.resource_string("static/js/lib/jquery.twentytwenty.js"))
+        frag.add_javascript(self.resource_string("static/js/lib/three.js"))
+        frag.add_javascript(self.resource_string("static/js/lib/D.js"))
+        frag.add_javascript(self.resource_string("static/js/lib/uevent.js"))
+        frag.add_javascript(self.resource_string("static/js/lib/doT.js"))
+        frag.add_javascript(self.resource_string("static/js/lib/photo-sphere-viewer.js"))
         frag.add_javascript(self.resource_string("static/js/src/developers_eyes.js"))
         frag.initialize_js('DevelopersEyesXBlock')
         return frag
-
-    # TO-DO: change this handler to perform your own actions.  You may need more
-    # than one handler, or you may not need any handlers at all.
-    @XBlock.json_handler
-    def increment_count(self, data, suffix=''):
-        """
-        An example handler, which increments the data.
-        """
-        # Just to show data coming in...
-        assert data['hello'] == 'world'
-
-        self.count += 1
-        return {"count": self.count}
 
     # TO-DO: change this to create the scenarios you'd like to see in the
     # workbench while developing your XBlock.

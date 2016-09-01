@@ -1,0 +1,375 @@
+.xblock-render #container {
+  position: relative;
+}
+
+#container {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background-image: url(../img/background/background.jpg);
+        background-size: 100% 100%;
+        overflow: hidden;
+      }
+
+      #container a {
+        position: fixed;
+        z-index: 2;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 22px;
+        font-family: sans;
+        color: white;
+      }
+
+      #placemakingPotential {
+        top: 63%;
+        left: 10%;
+        transform: rotate3d(-10, 18, 6, -33deg);
+      }
+
+      #streetGrid {
+        top: 72%;
+        left: 28%;
+        transform: rotate3d(1, 3, 1, 58deg);
+      }
+
+      #streetGridContent .background {
+        background-image: url(../img/background/street-grid.jpg);
+      }
+
+      #streetGridImg {
+        content:url(../img/street-grid.jpg);
+      }
+
+      #goodBones {
+        top: 50%;
+        left: 66%;
+        transform: rotate3d(-9, 15, 3, -45deg);
+      }
+
+      #goodBonesContent .background {
+        background-image: url(../img/background/good-bones.jpg);
+      }
+
+      #investmentPotential {
+        top: 28%;
+        left: 28%;
+        transform: rotate3d(10, 28, 7, -37deg);
+      }
+      #strategicLocation {
+        top: 12%;
+        left: 53%;
+        transform: rotate3d(2, 12, 0, 24deg);
+        font-size: 12px !important;
+      }
+
+      #strategicLocationContent .background {
+        background-image: url(../img/background/strat-location.jpg);
+      }
+
+      #airplaneIcon {
+        width: 80px;
+        margin-left: 70%;
+        content:url(../img/airplane.png);
+      }
+
+      #buildingIcon {
+        margin-left: 80px;
+        content:url(../img/building.png);
+      }
+
+      #highDensity {
+        top: 21%;
+        left: 75%;
+        transform: rotate3d(5, 12, 0, 35deg);
+        font-size: 12px !important;
+      }
+
+      #highDensityContent .background {
+        background-image: url(../img/background/high-density.jpg);
+      }
+
+      #highDensityContent .content {
+        padding-bottom: 2em;
+      }
+
+      .developerEyesContent {
+        display: none;
+      }
+
+      #streetGridContent .content {
+        margin-top: 2em;
+      }
+
+      #streetGridContent a {
+        color: white;
+      }
+
+      #twentytwenty {
+        min-height: 400px;
+      }
+
+      #ttBefore {
+        content:url(../img/1_1.jpg);
+      }
+
+      #ttAfter {
+        content:url(../img/1_2.jpg);
+      }
+
+      #twentytwenty img {
+        min-height: 400px;
+        min-width: 500px;
+      }
+
+      #goodBonesContent .content-text {
+        font-size: 14px !important;
+      }
+
+      #panoContainer {
+        padding: 0;
+      }
+
+      /* STANDARD CSS */
+      .xblock-render .textimagexblock-wrapper {
+        display: none;
+      }
+
+      .xblock-render .background {
+        width: auto !important;
+      }
+
+      .textimagexblock-wrapper img {
+        display: block;
+        width: 70%;
+        height: auto;
+        margin: 1em auto;
+      }
+
+      .textimagexblock-wrapper p {
+        padding: 0 15px 0 0 !important;
+        font-size: 1em !important;
+      }
+
+      .textimagexblock-wrapper button {
+        background: transparent;
+        color: white;
+        text-transform: uppercase;
+        padding: 15px;
+        font-size: 1.1em;
+        font-weight: normal;
+        cursor: pointer;
+        border: 1px solid white;
+        z-index: 101;
+        box-shadow: 0 0 0 !important;
+        text-shadow: 0 0 0 !important;
+      }
+
+      .textimagexblock-wrapper button:focus {
+        box-shadow: 0 0 0;
+      }
+
+      .textimagexblock-wrapper button:hover {
+        opacity: .7;
+        background: transparent;
+      }
+
+      .textimagexblock-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 3;
+      }
+
+      .textimagexblock-wrapper .background {
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 4em;
+      }
+
+      .textimagexblock-wrapper .content {
+        position: absolute;
+        top: 10%;
+        left: 14%;
+        padding: 0;
+        height: 80%;
+        width: 72%;
+        overflow: auto;
+        z-index: 100;
+      }
+
+      .textimagexblock-wrapper .header-text {
+        font-size: 54px !important;
+        font-weight: 100;
+        color: white !important;
+        margin: 0;
+        margin-bottom: 1em;
+        padding: 0;
+        text-align: left;
+      }
+
+      .textimagexblock-wrapper .button-container {
+        text-align: center;
+        width: 100%;
+        display: inline-block;
+      }
+
+      .textimagexblock-wrapper .main-content {
+        margin: 30px auto;
+        position: relative;
+        text-align: center;
+        width: 100%;
+      }
+
+      .textimagexblock-wrapper .item {
+        width: 20%;
+        text-align: left;
+        color: white;
+        padding: 20px;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .textimagexblock-wrapper .item-line-top {
+        background-color: #c94d29;
+        height: 7px;
+        border: none;
+        border-radius: 1px;
+      }
+
+      .textimagexblock-wrapper .item-number {
+        font-size: 3em;
+        font-family: "Roboto Condensed";
+        display: block;
+      }
+
+      .textimagexblock-wrapper .item-title {
+        font-size: 2em;
+        font-family: "Roboto Condensed";
+        display: block;
+        padding-bottom: 30px;
+      }
+
+      .textimagexblock-wrapper .item-text {
+        font-size: 1.4em;
+        font-family: "Roboto Condensed";
+        display: block;
+        padding: 20px 0;
+        min-height: 60px;
+      }
+
+      .textimagexblock-wrapper .content-text {
+        font-family: sans;
+        font-size: 20px !important;
+        line-height: 36px;
+        color: white !important;
+        text-align: left;
+        margin: 0;
+        padding: 3em;
+      }
+
+      .textimagexblock-wrapper ol {
+        margin-left: 4em !important;
+      }
+
+      .textimagexblock-wrapper li {
+        font-family: sans;
+        font-size: 18px;
+        line-height: 28px;
+        color: white;
+        text-align: left;
+        padding: 0 2em 2em 0;
+      }
+
+      .textimagexblock-wrapper .left-side {
+        width: 48%;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .textimagexblock-wrapper .right-side {
+        width: 48%;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      /* Let's get this party started */
+      ::-webkit-scrollbar { width: 10px; }
+      /* Track */
+      ::-webkit-scrollbar-track {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: rgba(255,255,255,0.3);
+      }
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: rgba(255,255,255,0.9);
+      }
+      ::-webkit-scrollbar-thumb:window-inactive { background: rgba(255,255,255,0.4); }
+
+      hr {
+        border: 0;
+        height: 1px;
+        background: white;
+      }
+
+      .meter {
+        height: 8px;  /* Can be anything */
+        position: relative;
+        background: #555;
+        -moz-border-radius: 25px;
+        -webkit-border-radius: 25px;
+        border-radius: 25px;
+        padding: 0;
+      }
+
+      .meter > span {
+        display: block;
+        height: 100%;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: #48ada7;
+        position: relative;
+      }
+
+      .meter > span:after {
+        content: " ";
+        position: absolute;
+        right: -7px;
+        top: -3px;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background: #48ada7;
+        border-radius: 100%;
+      }
+
+      .content-text .img-icon {
+        display: inline;
+        width: 50px;
+        height: 50px;
+      }
+
+      .meter-caption {
+        font-size: 16px;
+        color: white;
+        font-family: Roboto;
+      }
+
+      .meter-caption * {
+        vertical-align: middle;
+      }
