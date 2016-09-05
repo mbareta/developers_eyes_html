@@ -30,6 +30,7 @@ setup(
     ],
     install_requires=[
         'XBlock',
+        'openpyxl'
     ],
     entry_points={
         'xblock.v1': [

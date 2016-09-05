@@ -1,11 +1,21 @@
 function StudioEdit(runtime, element) {
   $(element).find('.save-button').bind('click', function() {
     var handlerUrl = runtime.handlerUrl(element, 'studio_submit');
-    var data = {
-      display_name: $(element).find('input[name=display_name]').val(),
-    };
+
+    var data = new FormData();
+    data.append('display_name', $(element).find('input[name=display_name]').val());
+    data.append('excel', $(element).find('input[name=excel]')[0].files[0]);
+
     runtime.notify('save', {state: 'start'});
-    $.post(handlerUrl, JSON.stringify(data)).done(function(response) {
+    $.ajax({
+      url: handlerUrl,
+      type: 'POST',
+      data: data,
+      cache: false,
+      dataType: 'json',
+      processData: false,
+      contentType: false,
+    }).done(function(response) {
       runtime.notify('save', {state: 'end'});
     });
   });

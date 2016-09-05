@@ -16,6 +16,9 @@ function DevelopersEyesXBlock(runtime, element) {
               mousewheel: false
             });
           }
+          else if (id === 'investmentPotential') {
+            initMultibarChart();
+          }
         }});
       });
 
