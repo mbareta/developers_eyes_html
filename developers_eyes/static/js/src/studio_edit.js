@@ -4,6 +4,8 @@ function StudioEdit(runtime, element) {
 
     var data = new FormData();
     data.append('display_name', $(element).find('input[name=display_name]').val());
+    data.append('display_description', $(element).find('input[name=display_description]').val());
+    data.append('thumbnail_url', $(element).find('input[name=thumbnail_url]').val());
     data.append('excel', $(element).find('input[name=excel]')[0].files[0]);
 
     runtime.notify('save', {state: 'start'});
