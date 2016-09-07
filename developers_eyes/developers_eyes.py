@@ -26,7 +26,10 @@ class DevelopersEyesXBlock(XBlock):
 
     # Fields are defined on the class.  You can access them in your code as
     # self.<fieldname>.
-
+    display_name = String(display_name="Display Name",
+                          default="Through the developers eyes interactive",
+                          scope=Scope.settings,
+                          help="This name appears in the horizontal navigation at the top of the page.")
     json_data = String(help="JSON data from excel file", default="None", scope=Scope.content)
 
     def resource_string(self, path):
