@@ -11,7 +11,7 @@ function DevelopersEyesXBlock(runtime, element) {
           else if(id === 'placemakingPotential') {
             PhotoSphereViewer({
               container: document.getElementById('panoContainer'),
-              panorama: 'http://localhost:8000/asset-v1:mitX+MITBE001+2017_T1+type@asset+block@pano.jpg',
+              panorama: 'http://54.83.196.116:8080/asset-v1:edX+DemoX+Demo_Course+type@asset+block@pano2.jpg',
               mousemove: false,
               mousewheel: false
             });
