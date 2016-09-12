@@ -166,7 +166,7 @@
   font-size: 1em !important;
 }
 
-.textimagexblock-wrapper button {
+.textimagexblock-wrapper button, .back-to-aerial-view {
   background: transparent;
   color: white;
   text-transform: uppercase;
@@ -180,11 +180,11 @@
   text-shadow: 0 0 0 !important;
 }
 
-.textimagexblock-wrapper button:focus {
+.textimagexblock-wrapper button:focus, .back-to-aerial-view:focus {
   box-shadow: 0 0 0;
 }
 
-.textimagexblock-wrapper button:hover {
+.textimagexblock-wrapper button:hover, .back-to-aerial-view:hover {
   opacity: .7;
   background: transparent;
 }
