@@ -13,7 +13,7 @@ function initMultibarChart() {
             {
                 "x_title": "Year",
                 "y_title": "US Dollars(2005)",
-                "format_type": d3.format(',')
+                "format_type": d3.format('$.2f')
             }
         ],
         "population": [
@@ -35,7 +35,7 @@ function initMultibarChart() {
                 "x_title": "",
                 "y_title": "",
                 "format_type": function (d) {
-                    return d + "%";
+                    return d.toFixed(3) + "%";
                 }
             }
         ],
@@ -44,7 +44,7 @@ function initMultibarChart() {
                 "x_title": "",
                 "y_title": "",
                 "format_type": function (d) {
-                    return d + "%";
+                    return d.toFixed(3) + "%";
                 }
             }
         ],
@@ -53,7 +53,7 @@ function initMultibarChart() {
                 "x_title": "",
                 "y_title": "",
                 "format_type": function (d) {
-                    return d + "%";
+                    return d.toFixed(3)+ "%";
                 }
             }
         ]
