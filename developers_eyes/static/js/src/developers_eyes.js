@@ -1,5 +1,9 @@
 /* Javascript for DevelopersEyesXBlock. */
 function DevelopersEyesXBlock(runtime, element) {
+    $(".view-on-map").click(function() {
+      parent.postMessage(JSON.stringify({action: 'openMap' }),'*');
+    });
+
     $('a').on('click', function() {
         var id = this.id;
         zoom.to({element: this, callback: function(){
@@ -13,7 +17,8 @@ function DevelopersEyesXBlock(runtime, element) {
               container: document.getElementById('panoContainer'),
               panorama: 'http://54.83.196.116:8080/asset-v1:edX+DemoX+Demo_Course+type@asset+block@pano2.jpg',
               mousemove: false,
-              mousewheel: false
+              mousewheel: false,
+              navbar: false
             });
           }
           else if (id === 'investmentPotential') {
@@ -23,6 +28,9 @@ function DevelopersEyesXBlock(runtime, element) {
       });
 
       $('.back-to-aerial-view').on('click', function(){
+        if ($(this).hasClass("investment-potential")){
+          $('#charts-list').html("");
+        }
         $('.developerEyesContent').fadeOut();
         zoom.out();
       });

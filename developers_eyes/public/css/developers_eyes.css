@@ -133,7 +133,7 @@
 }
 
 #twentytwenty img {
-  min-height: 400px;
+  height: 400px;
   min-width: 500px;
 }
 
@@ -158,7 +158,6 @@
   display: block;
   width: 70%;
   height: auto;
-  margin: 1em auto;
 }
 
 .textimagexblock-wrapper p {
@@ -244,7 +243,7 @@
 }
 
 .textimagexblock-wrapper .item {
-  width: 20%;
+  width: 300px;
   text-align: left;
   color: white;
   padding: 20px;
@@ -260,7 +259,7 @@
 }
 
 .textimagexblock-wrapper .item-number {
-  font-size: 3em;
+  font-size: 100px;
   font-family: "Roboto Condensed";
   display: block;
 }
@@ -313,6 +312,16 @@
   width: 48%;
   display: inline-block;
   vertical-align: middle;
+}
+
+.textimagexblock-wrapper .view-on-map{
+  font-size: 24px;
+  font-family: "Roboto Condensed" !important;
+  font-weight: lighter;
+  color: white;
+  margin-left: 20px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 /* Let's get this party started */
