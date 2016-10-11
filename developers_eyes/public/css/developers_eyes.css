@@ -170,7 +170,6 @@
   color: white;
   text-transform: uppercase;
   padding: 15px;
-  margin-top: 80px;
   font-size: 1.1em;
   font-weight: normal;
   cursor: pointer;
@@ -178,6 +177,10 @@
   z-index: 101;
   box-shadow: 0 0 0 !important;
   text-shadow: 0 0 0 !important;
+}
+
+.textimagexblock-wrapper button, .back-to-aerial-view.investment-potential{
+  margin-top: 80px;
 }
 
 .textimagexblock-wrapper button:focus, .back-to-aerial-view:focus {
