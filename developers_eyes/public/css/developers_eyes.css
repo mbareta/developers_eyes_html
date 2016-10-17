@@ -121,6 +121,7 @@
 }
 
 #twentytwenty {
+  line-height: 0;
   min-height: 400px;
 }
 
@@ -132,7 +133,17 @@
   content:url(../img/1_2.jpg);
 }
 
-#twentytwenty img {
+#ttBefore::after {
+  content:url(../img/1_1.jpg);
+  display: flex;
+}
+
+#ttAfter::after {
+  content:url(../img/1_2.jpg);
+  display: flex;
+}
+
+#twentytwenty img, img::after {
   height: 400px;
   min-width: 500px;
 }
@@ -307,6 +318,7 @@
 
 .textimagexblock-wrapper .left-side {
   width: 48%;
+  min-width: 510px;
   display: inline-block;
   vertical-align: middle;
 }
