@@ -36,7 +36,8 @@ svg {
 }
 
 .header {
-    padding: 1% 20% 1% 20%;
+    padding: 7% 7% 1%;
+    padding-left: calc(10% + 150px);
 }
 
 .header .navigation-title {
@@ -86,5 +87,5 @@ text {
 
 /* override legend position */
 g.nvd3.nv-legend {
-    transform: translate(400px, -30px);
+    transform: translate(140px, -30px);
 }
