@@ -71,6 +71,16 @@
   left: 28%;
   transform: rotate3d(10, 28, 7, -37deg);
 }
+#investmentPotentialContent .button-container{
+  position: fixed;
+  top: 90%;
+  left: 0;
+  height: 10%;
+  width: 100%;
+  background-color: black;
+  z-index: 1;
+  text-align: right;
+}
 #strategicLocation {
   top: 12%;
   left: 53%;
@@ -190,8 +200,12 @@
   text-shadow: 0 0 0 !important;
 }
 
-.textimagexblock-wrapper button, .back-to-aerial-view.investment-potential{
+.textimagexblock-wrapper button{
   margin-top: 22px;
+}
+
+.back-to-aerial-view.investment-potential{
+  margin: 0 18% 0 0;
 }
 
 .textimagexblock-wrapper button:focus, .back-to-aerial-view:focus {
