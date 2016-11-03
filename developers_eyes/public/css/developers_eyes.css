@@ -113,7 +113,7 @@
 }
 
 #streetGridContent .content {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 #streetGridContent a {
@@ -191,7 +191,7 @@
 }
 
 .textimagexblock-wrapper button, .back-to-aerial-view.investment-potential{
-  margin-top: 80px;
+  margin-top: 22px;
 }
 
 .textimagexblock-wrapper button:focus, .back-to-aerial-view:focus {
@@ -223,6 +223,18 @@
 }
 
 .textimagexblock-wrapper .content {
+  position: relative;
+  top: 16%;
+  left: 14%;
+  padding: 0;
+  height: 61%;
+  width: 72%;
+  overflow: auto;
+  z-index: 100;
+  display: inline-block;
+}
+
+#panoContainer .content{
   position: absolute;
   top: 10%;
   left: 14%;
@@ -237,20 +249,23 @@
   font-size: 54px !important;
   font-weight: 100;
   color: white !important;
-  margin: 0;
+  margin: 0.4em 0 !important;
   margin-bottom: 1em;
   padding: 0;
   text-align: left;
+  left: 14%;
+  position: relative;
 }
 
 .textimagexblock-wrapper .button-container {
-  text-align: center;
-  width: 100%;
   display: inline-block;
+  text-align: right;
+  width: 70%;
+  left: 10%;
+  position: relative;
 }
 
 .textimagexblock-wrapper .main-content {
-  margin: 30px auto;
   position: relative;
   text-align: center;
   width: 100%;
@@ -317,16 +332,15 @@
 }
 
 .textimagexblock-wrapper .left-side {
-  width: 48%;
-  min-width: 510px;
+  width: 510px;
   display: inline-block;
-  vertical-align: middle;
+  padding-right: 40px;
 }
 
 .textimagexblock-wrapper .right-side {
-  width: 48%;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
+  width: 675px;
 }
 
 .textimagexblock-wrapper .view-on-map{
@@ -359,6 +373,7 @@ hr {
   border: 0;
   height: 1px;
   background: white;
+  margin: 6px 0;
 }
 
 .meter {

@@ -214,7 +214,7 @@ function initMultibarChart() {
                 svg.transition().duration(0).call(chart);
 
                 svg.append("text")
-                    .attr("x", 365)
+                    .attr("x", 140)
                     .attr("y", 15)
                     .attr("text-anchor", "middle")
                     .text("Isolate by region: ");
@@ -251,8 +251,8 @@ function initMultibarChart() {
             },
             callback: function (graph) {
                 nv.utils.windowResize(function () {
-                    var width = nv.utils.windowSize().width;
-                    var height = nv.utils.windowSize().height;
+                    var width = nv.utils.windowSize().width * 0.66;
+                    var height = nv.utils.windowSize().height * 0.60;
                     graph.width(width).height(height);
 
                     d3.select('#multibarChart svg')
