@@ -271,6 +271,7 @@
   left: 14%;
   top: 10%;
   position: relative;
+  margin: 0 !important;
 }
 
 #panoContainer .header-text{
@@ -285,11 +286,14 @@
   left: 5%;
   top: 80%;
   position: absolute;
+  padding-top: 10px;
 }
 
 #panoContainer .button-container{
-  position: relative;
-  top: 0%
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  width: 72%;
 }
 
 .textimagexblock-wrapper .main-content {
@@ -324,7 +328,7 @@
   font-size: 2em;
   font-family: "Roboto Condensed";
   display: block;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .textimagexblock-wrapper .item-text {

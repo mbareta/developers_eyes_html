@@ -182,7 +182,7 @@ function initMultibarChart() {
         nv.addGraph({
             generate: function () {
                 var width = nv.utils.windowSize().width * 0.66,
-                    height = nv.utils.windowSize().height * 0.60,
+                    height = nv.utils.windowSize().height * 0.56,
                     yRange = getRangeForY(data.max_y_range),
                     numberOfYticks = yRange > 1 ? 5 : 10,
                     tickFormat = data.tick_format;
@@ -252,7 +252,7 @@ function initMultibarChart() {
             callback: function (graph) {
                 nv.utils.windowResize(function () {
                     var width = nv.utils.windowSize().width * 0.66;
-                    var height = nv.utils.windowSize().height * 0.60;
+                    var height = nv.utils.windowSize().height * 0.56;
                     graph.width(width).height(height);
 
                     d3.select('#multibarChart svg')
