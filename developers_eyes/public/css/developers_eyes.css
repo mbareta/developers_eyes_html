@@ -56,6 +56,13 @@
   content:url(../img/street-grid.jpg);
 }
 
+#streetGridImg:after {
+  background-image: url(../img/street-grid.jpg);
+  display: inline-block;
+  background-size: 100% 100%;
+  content: "";
+}
+
 #goodBones {
   top: 50%;
   left: 66%;
@@ -88,7 +95,7 @@
   font-size: 12px !important;
 }
 
-#strategicLocationContent .background {
+#strategicLocationContent .background, #strategicLocationContent .background:after {
   background-image: url(../img/background/strat-location.jpg);
 }
 
@@ -112,10 +119,6 @@
 
 #highDensityContent .background {
   background-image: url(../img/background/high-density.jpg);
-}
-
-#highDensityContent .content {
-  padding-bottom: 2em;
 }
 
 .developerEyesContent {
@@ -177,7 +180,7 @@
 
 .textimagexblock-wrapper img {
   display: block;
-  width: 70%;
+  width: 90%;
   height: auto;
 }
 
@@ -233,15 +236,15 @@
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 4em;
+  position: relative;
 }
 
 .textimagexblock-wrapper .content {
-  position: relative;
-  top: 16%;
+  position: absolute;
+  top: 25%;
   left: 14%;
   padding: 0;
-  height: 61%;
+  height: 55%;
   width: 72%;
   overflow: auto;
   z-index: 100;
@@ -250,7 +253,7 @@
 
 #panoContainer .content{
   position: absolute;
-  top: 10%;
+  top: 25%;
   left: 14%;
   padding: 0;
   height: 80%;
@@ -263,20 +266,30 @@
   font-size: 54px !important;
   font-weight: 100;
   color: white !important;
-  margin: 0.4em 0 !important;
-  margin-bottom: 1em;
   padding: 0;
   text-align: left;
   left: 14%;
+  top: 10%;
   position: relative;
+}
+
+#panoContainer .header-text{
+  position: relative;
+  top: 0%;
 }
 
 .textimagexblock-wrapper .button-container {
   display: inline-block;
   text-align: right;
   width: 70%;
-  left: 10%;
+  left: 5%;
+  top: 80%;
+  position: absolute;
+}
+
+#panoContainer .button-container{
   position: relative;
+  top: 0%
 }
 
 .textimagexblock-wrapper .main-content {
@@ -286,7 +299,7 @@
 }
 
 .textimagexblock-wrapper .item {
-  width: 300px;
+  width: 360px;
   text-align: left;
   color: white;
   padding: 20px;
@@ -311,7 +324,7 @@
   font-size: 2em;
   font-family: "Roboto Condensed";
   display: block;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .textimagexblock-wrapper .item-text {
@@ -319,7 +332,7 @@
   font-family: "Roboto Condensed";
   display: block;
   padding: 20px 0;
-  min-height: 60px;
+  min-height: 45px;
 }
 
 .textimagexblock-wrapper .content-text {
@@ -346,15 +359,16 @@
 }
 
 .textimagexblock-wrapper .left-side {
-  width: 510px;
+  width: 40%;
+  min-width: 500px;
   display: inline-block;
-  padding-right: 40px;
 }
 
 .textimagexblock-wrapper .right-side {
   display: inline-block;
   vertical-align: top;
-  width: 675px;
+  width: 45%;
+  margin-left: 20px;
 }
 
 .textimagexblock-wrapper .view-on-map{
