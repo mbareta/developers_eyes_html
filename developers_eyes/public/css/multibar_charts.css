@@ -38,6 +38,8 @@ svg {
 .header {
     padding: 7% 7% 1%;
     padding-left: calc(10% + 150px);
+    max-height: 17%;
+    overflow: hidden;
 }
 
 .header .navigation-title {
