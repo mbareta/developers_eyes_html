@@ -81,12 +81,11 @@
 #investmentPotentialContent .button-container{
   position: fixed;
   top: 90%;
-  left: 0;
-  height: 10%;
-  width: 100%;
+  text-align: right!important;
+  left: 50%;
+  width: 30%;
   background-color: black;
   z-index: 1;
-  text-align: right;
 }
 #strategicLocation {
   top: 12%;
@@ -282,8 +281,8 @@
 .textimagexblock-wrapper .button-container {
   display: inline-block;
   text-align: right;
-  width: 70%;
-  left: 5%;
+  width: 40%;
+  left: 35%;
   top: 80%;
   position: absolute;
   padding-top: 10px;
@@ -291,9 +290,11 @@
 
 #panoContainer .button-container{
   position: absolute;
-  top: 80%;
-  left: 10%;
-  width: 72%;
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+  left: 50%;
+  top: 70%;
 }
 
 .textimagexblock-wrapper .main-content {

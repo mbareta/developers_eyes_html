@@ -182,7 +182,7 @@ function initMultibarChart() {
         nv.addGraph({
             generate: function () {
                 var width = nv.utils.windowSize().width * 0.66,
-                    height = nv.utils.windowSize().height * 0.56,
+                    height = nv.utils.windowSize().height * 0.5,
                     yRange = getRangeForY(data.max_y_range),
                     numberOfYticks = yRange > 1 ? 5 : 10,
                     tickFormat = data.tick_format;
@@ -214,7 +214,7 @@ function initMultibarChart() {
                 svg.transition().duration(0).call(chart);
 
                 svg.append("text")
-                    .attr("x", 140)
+                    .attr("x", 100)
                     .attr("y", 15)
                     .attr("text-anchor", "middle")
                     .text("Isolate by region: ");
@@ -228,7 +228,7 @@ function initMultibarChart() {
 
                 svg.append("text")
                     .attr("text-anchor", "middle")
-                    .attr("transform", "translate(" + (width / 2) + "," + (height + 45) + ")")
+                    .attr("transform", "translate(" + (width / 2) + "," + (height + 30) + ")")
                     .style("opacity", 0.25)
                     .text(data.x_title);
 
@@ -236,7 +236,8 @@ function initMultibarChart() {
                     var group = d3.select(this),
                         circle = group.select('circle');
                     var color = circle.style('fill');
-
+                    var text = group.select('text');
+                    text.attr("transform","translate(-70,0)");
                     circle.remove();
                     var symbol = group.append('path')
                         .attr('d', d3.svg.symbol().type('square'))
@@ -244,7 +245,7 @@ function initMultibarChart() {
                         .style('fill', color)
                         // without this class, it doesn't get toggled fill when enable/disable
                         .attr('class', 'nv-legend-symbol')
-                        .attr('transform', 'scale(2, 1.5) translate(-2,0)')
+                        .attr('transform', 'scale(2, 1.5) translate(-40,0)')
                 });
 
                 return chart;
@@ -252,7 +253,7 @@ function initMultibarChart() {
             callback: function (graph) {
                 nv.utils.windowResize(function () {
                     var width = nv.utils.windowSize().width * 0.66;
-                    var height = nv.utils.windowSize().height * 0.56;
+                    var height = nv.utils.windowSize().height * 0.5;
                     graph.width(width).height(height);
 
                     d3.select('#multibarChart svg')
