@@ -98,13 +98,13 @@
   background-image: url(../img/background/strat-location.jpg);
 }
 
-#airplaneIcon {
+#airplaneIcon, #airplaneIcon::after {
   width: 80px;
   margin-left: 70%;
   content:url(../img/airplane.png);
 }
 
-#buildingIcon {
+#buildingIcon, #buildingIcon::after {
   margin-left: 80px;
   content:url(../img/building.png);
 }
