@@ -31,21 +31,21 @@
   z-index: 2;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 1.5vw;
   font-family: sans;
   color: white;
 }
 
 #placemakingPotential {
-  top: 63%;
-  left: 10%;
-  transform: rotate3d(-10, 18, 6, -33deg);
+  top: 66%;
+  left: 9%;
+  transform: rotateX(24deg) rotateY(-34deg) scaleY(1.5);
 }
 
 #streetGrid {
-  top: 72%;
-  left: 28%;
-  transform: rotate3d(1, 3, 1, 58deg);
+  top: 73%;
+  left: 29%;
+  transform: rotateX(36deg) rotateY(46deg) scaleY(1.5);
 }
 
 #streetGridContent .background {
@@ -64,9 +64,9 @@
 }
 
 #goodBones {
-  top: 50%;
+  top: 53%;
   left: 66%;
-  transform: rotate3d(-9, 15, 3, -45deg);
+  transform: rotateX(36deg) rotateY(-33deg) scaleY(1.5);
 }
 
 #goodBonesContent .background {
@@ -74,9 +74,9 @@
 }
 
 #investmentPotential {
-  top: 28%;
+  top: 29%;
   left: 28%;
-  transform: rotate3d(10, 28, 7, -37deg);
+  transform: rotateX(36deg) rotateY(-17deg) scaleY(1.5);
 }
 #investmentPotentialContent .button-container{
   position: fixed;
@@ -88,32 +88,32 @@
   z-index: 1;
 }
 #strategicLocation {
-  top: 12%;
-  left: 53%;
-  transform: rotate3d(2, 12, 0, 24deg);
-  font-size: 12px !important;
+  top: 14%;
+  left: 52%;
+  font-size: 1vw !important;
+  transform: rotateX(36deg) rotateY(6deg) scaleY(1.5);
 }
 
 #strategicLocationContent .background, #strategicLocationContent .background:after {
   background-image: url(../img/background/strat-location.jpg);
 }
 
-#airplaneIcon {
+#airplaneIcon, #airplaneIcon::after {
   width: 80px;
   margin-left: 70%;
   content:url(../img/airplane.png);
 }
 
-#buildingIcon {
+#buildingIcon, #buildingIcon::after {
   margin-left: 80px;
   content:url(../img/building.png);
 }
 
 #highDensity {
-  top: 21%;
+  top: 22%;
   left: 75%;
-  transform: rotate3d(5, 12, 0, 35deg);
-  font-size: 12px !important;
+  font-size: 1vw !important;
+  transform: rotateX(7deg) rotateY(41deg) scaleY(1.5);
 }
 
 #highDensityContent .background {

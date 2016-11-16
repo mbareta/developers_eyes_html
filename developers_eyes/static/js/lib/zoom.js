@@ -9,7 +9,7 @@ var zoomContentElement = document.getElementById('container');
 
 var zoom = (function(){
 
-	var TRANSITION_DURATION = 800;
+	var TRANSITION_DURATION = 1200;
 
 	// The current zoom level (scale)
 	var level = 1;
@@ -203,7 +203,7 @@ var zoom = (function(){
 				}
 
 				// If width/height values are set, calculate scale from those values
-				if( options.width !== undefined && options.height !== undefined ) {
+				if( options.width !== undefined && options.height !== undefined && options.scale == undefined) {
 					options.scale = Math.max( Math.min( window.innerWidth / options.width, window.innerHeight / options.height ), 1 );
 				}
 
