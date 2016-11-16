@@ -17,9 +17,10 @@ from webob.response import Response
 from xmodule.contentstore.content import StaticContent
 from xmodule.contentstore.django import contentstore
 
+from xblock_django.mixins import FileUploadMixin
 
 
-class DevelopersEyesXBlock(XBlock):
+class DevelopersEyesXBlock(XBlock, FileUploadMixin):
     """
     TO-DO: document what your XBlock does.
     """
@@ -89,10 +90,9 @@ class DevelopersEyesXBlock(XBlock):
         """
         html_str = pkg_resources.resource_string(__name__, "static/html/studio_view.html")
         frag = Fragment(unicode(html_str).format(
-                                                    display_name=self.display_name,
-                                                    display_description=self.display_description,
-                                                    thumbnail_url=self.thumbnail_url
-                                                ))
+            display_name=self.display_name,
+            display_description=self.display_description
+        ))
         js_str = pkg_resources.resource_string(__name__, "static/js/src/studio_edit.js")
         frag.add_javascript(unicode(js_str))
         frag.initialize_js('StudioEdit')
@@ -107,7 +107,11 @@ class DevelopersEyesXBlock(XBlock):
         data = request.POST
         self.display_name = data['display_name']
         self.display_description = data['display_description']
-        self.thumbnail_url = data['thumbnail_url']
+
+        block_id = data['usage_id']
+        if not isinstance(data['thumbnail'], basestring):
+            upload = data['thumbnail']
+            self.thumbnail_url = self.upload_to_s3('THUMBNAIL', upload.file, block_id, self.thumbnail_url)
 
         if not isinstance(data['excel'], basestring):
             upload = data['excel']
@@ -117,9 +121,9 @@ class DevelopersEyesXBlock(XBlock):
             sheets = []
             for worksheet in workbook:
                 sheet = {
-                        "name": worksheet.title,
-                        "rows": []
-                    }
+                    "name": worksheet.title,
+                    "rows": []
+                }
                 for row in worksheet.iter_rows():
                     sheet_row = {
                         "key": None,
@@ -151,12 +155,11 @@ class DevelopersEyesXBlock(XBlock):
         path = (
             '{loc.block_type}/{loc.block_id}'
             '/{filename}'.format(
-                    loc=self.location,
-                    filename=filename
+                loc=self.location,
+                filename=filename
             )
         )
         return path
-
 
     # TO-DO: change this to create the scenarios you'd like to see in the
     # workbench while developing your XBlock.
