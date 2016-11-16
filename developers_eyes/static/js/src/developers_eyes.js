@@ -6,7 +6,7 @@ function DevelopersEyesXBlock(runtime, element) {
 
     $('a').on('click', function() {
         var id = this.id;
-        zoom.to({element: this, callback: function(){
+        zoom.to({element: this, scale: 3, callback: function(){
           $('#'+id+'Content').fadeIn();
 
           if(id === 'goodBones') {
