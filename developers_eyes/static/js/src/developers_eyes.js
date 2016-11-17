@@ -31,7 +31,7 @@ function DevelopersEyesXBlock(runtime, element) {
         if ($(this).hasClass("investment-potential")){
           $('#charts-list').html("");
         }
-        $('.developerEyesContent').fadeOut();
-        zoom.out();
+        $('.developerEyesContent').fadeOut(400);
+        setTimeout( zoom.out, 400 );
       });
 }
