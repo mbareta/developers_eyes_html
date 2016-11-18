@@ -8475,8 +8475,6 @@ nv.models.multiBarChart = function() {
             var wrap = container.selectAll('g.nv-wrap.nv-multiBarWithLegend').data([data]);
             var gEnter = wrap.enter().append('g').attr('class', 'nvd3 nv-wrap nv-multiBarWithLegend').append('g');
             var g = wrap.select('g');
-            // override
-            gEnter.attr('transform', "translate(60,30)");
 
             gEnter.append('g').attr('class', 'nv-x nv-axis');
             gEnter.append('g').attr('class', 'nv-y nv-axis');
@@ -8499,8 +8497,22 @@ nv.models.multiBarChart = function() {
                     availableHeight = nv.utils.availableHeight(height, container, margin);
                 }
 
-                g.select('.nv-legendWrap')
-                    .attr('transform', 'translate(' + controlWidth() + ',' + (-margin.top) +')');
+                /**
+                 * MIT override for positioning legend
+                 */
+
+                //g.select('.nv-legendWrap')
+                //    .attr('transform', 'translate(-' + (availableWidth / 5) + ', -7)')
+                //    .selectAll('.nv-series').each(function (d, i) {
+                //    // stack them in column instead row
+                //    var el = d3.select(this);
+                //    el.attr('class', 'nv-series')
+                //        .attr('transform', 'translate(' + 0 + ',' + i * 25 + ')');
+                //});
+
+                /**
+                 * end MIT override
+                 */
             }
 
             // Controls
@@ -8519,7 +8531,11 @@ nv.models.multiBarChart = function() {
                     .call(controls);
             }
 
-            wrap.attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+            /**
+             * MIT override
+             */
+            wrap.attr('transform', 'translate(250,30)');
+            //wrap.attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
             if (rightAlignYAxis) {
                 g.select(".nv-y.nv-axis")
                     .attr("transform", "translate(" + availableWidth + ",0)");

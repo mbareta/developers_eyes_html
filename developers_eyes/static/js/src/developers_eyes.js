@@ -1,5 +1,5 @@
 /* Javascript for DevelopersEyesXBlock. */
-function DevelopersEyesXBlock(runtime, element) {
+function DevelopersEyesXBlock(runtime, element, data) {
     $(".view-on-map").click(function() {
       parent.postMessage(JSON.stringify({action: 'openMap' }),'*');
     });
@@ -22,7 +22,7 @@ function DevelopersEyesXBlock(runtime, element) {
             });
           }
           else if (id === 'investmentPotential') {
-            initMultibarChart();
+            initMultibarChart(runtime, element, data);
           }
         }});
       });
