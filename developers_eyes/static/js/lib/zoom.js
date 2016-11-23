@@ -9,7 +9,7 @@ var zoomContentElement = document.getElementById('container');
 
 var zoom = (function(){
 
-	var TRANSITION_DURATION = 1200;
+	var TRANSITION_DURATION = 720;
 
 	// The current zoom level (scale)
 	var level = 1;
