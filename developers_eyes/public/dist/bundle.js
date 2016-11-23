@@ -328,6 +328,7 @@ module.exports = {
     setFileSpecs: setFileSpecs,
     setChartsSpecs: setChartsSpecs
 };
+
 },{}],3:[function(require,module,exports){
 'use strict';
 
@@ -546,4 +547,5 @@ module.exports = {
     updateLegendPosition: updateLegendPosition,
     updateFootnotePosition: updateFootnotePosition
 };
+
 },{}]},{},[1]);

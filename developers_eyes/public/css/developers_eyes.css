@@ -15,7 +15,6 @@
 
 #container {
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -24,6 +23,8 @@
   background-image: url(../img/background/background.jpg);
   background-size: 100% 100%;
   overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
 }
 
 #container a {
@@ -82,9 +83,8 @@
   position: fixed;
   top: 90%;
   text-align: right!important;
-  left: 50%;
-  width: 30%;
-  background-color: black;
+  left: 60%;
+  width: 24%;
   z-index: 1;
 }
 #strategicLocation {
