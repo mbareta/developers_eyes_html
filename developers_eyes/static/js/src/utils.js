@@ -153,7 +153,7 @@ function updateLegendPosition(width, file_name, d3graph_container) {
         // stack them in column instead row
         var el = d3.select(this);
         el.attr('class', 'nv-series')
-            .attr('transform', 'translate(' + -30 + ',' + i * 25 + ')');
+            .attr('transform', 'translate(' + 0 + ',' + i * 25 + ')');
     });
 }
 /**

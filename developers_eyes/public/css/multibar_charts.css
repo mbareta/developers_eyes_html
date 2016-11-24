@@ -75,7 +75,7 @@ svg {
     line-height: 30px;
     background-clip: content-box;
     /*font-size: 13px;*/
-    font-size: 1vw;
+    font-size: 0.75em;
 }
 
 .charts-list li:hover,
