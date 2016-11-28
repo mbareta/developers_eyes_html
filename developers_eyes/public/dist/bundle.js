@@ -8,6 +8,9 @@ global.initMultibarChart = function (runtime, element, data) {
     element = Array.isArray(element) ? element[0] : element;
     var $element = $(element);
 
+    // If the title exists, it means charts were rendered so we will not render them again, just let the user to continue where he left of.
+    if($element.find('#chart-title').text().length > 0) { return; }
+
     var chart_sheet_names = [];
     var _charts = [];
     var specs_data;
