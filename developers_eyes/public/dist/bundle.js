@@ -7,7 +7,6 @@ global.initMultibarChart = function (runtime, element, data) {
     // edx bug fix
     element = Array.isArray(element) ? element[0] : element;
     var $element = $(element);
-    if($element.find('#chart-title').text().length > 0) return;
 
     // If the title exists, it means charts were rendered so we will not render them again, just let the user to continue where he left of.
     if($element.find('#chart-title').text().length > 0) { return; }
