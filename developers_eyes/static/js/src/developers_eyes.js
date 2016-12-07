@@ -28,9 +28,6 @@ function DevelopersEyesXBlock(runtime, element, data) {
       });
 
       $('.back-to-aerial-view').on('click', function(){
-        if ($(this).hasClass("investment-potential")){
-          $('#charts-list').html("");
-        }
         $('.developerEyesContent').fadeOut(400);
         setTimeout( zoom.out, 400 );
       });
