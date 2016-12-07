@@ -129,3 +129,13 @@ text.footnote {
 .nvd3 rect[height="1"] {
   display: none !important;
 }
+
+@media (max-width: 1399px) {
+    .charts-list li {
+        min-width: 110px;
+        margin: 0 10px 5px 0;
+    }
+    .tick text {
+        font-size: 10px !important;
+    }
+}
