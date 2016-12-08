@@ -154,6 +154,18 @@ function updateLegendPosition(width, file_name, d3graph_container) {
         var el = d3.select(this);
         el.attr('class', 'nv-series')
             .attr('transform', 'translate(' + 0 + ',' + i * 25 + ')');
+        // if the legend is too long, wrap it.
+        if (d.key.length > 11) {
+            updateWrap('.nv-series', el);
+            el.selectAll('tspan').each(function (d, i) {
+                // since there is a rectangle before first tspan, on
+                // others we need to add 8px on the left (width of the rect)
+                if (i > 0) {
+                    d3.select(this).attr("x", 8);
+                }
+            });
+        }
+
     });
 }
 /**
