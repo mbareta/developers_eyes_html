@@ -16,7 +16,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    padding-top: 3em;
+    padding-top: 4.5em;
     color: white;
     font-family: 'Roboto Condensed', sans-serif;
     /* background image is generated from js*/
@@ -131,11 +131,20 @@ text.footnote {
 }
 
 @media (max-width: 1399px) {
+    .multibar-content {
+        width: 80%;
+        padding: 0 2%;
+    }
     .charts-list li {
         min-width: 110px;
         margin: 0 10px 5px 0;
     }
-    .tick text {
+    .tick text,
+    .nv-axisMaxMin text{
         font-size: 10px !important;
+    }
+
+    .header .navigation-title {
+        padding-bottom: 0;
     }
 }
