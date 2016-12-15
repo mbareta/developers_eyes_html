@@ -62,7 +62,7 @@ class DevelopersEyesXBlock(XBlock, FileUploadMixin):
             self.runtime.local_resource_url(
                 self, 'public/css/nvd3.css'))
 
-        frag.add_javascript(self.resource_string("static/js/lib/zoom.js"))
+        frag.add_javascript(self.resource_string("static/js/lib/jquery.zoomooz.js"))
         frag.add_javascript(self.resource_string("static/js/lib/jquery.event.move.js"))
         frag.add_javascript(self.resource_string("static/js/lib/jquery.twentytwenty.js"))
 
