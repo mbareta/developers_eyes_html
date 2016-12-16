@@ -10,10 +10,6 @@
     font-style: normal;
 }
 
-html {
-  font: inherit;
-}
-
 .xblock-render {
   position: relative;
   min-height: 400px;
@@ -35,15 +31,6 @@ html {
 
 .developers_eyes_block {
   background: black;
-}
-
-.black-cover {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: .2;
-  background-color: #000;
 }
 
 #container {
