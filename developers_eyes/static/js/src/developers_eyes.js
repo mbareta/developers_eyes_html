@@ -34,7 +34,13 @@ function DevelopersEyesXBlock(runtime, element, data) {
 
     $('.back-to-aerial-view').on('click', function(){
       $('.developerEyesContent').fadeOut(400);
-      setTimeout( zoom.out, 400 );
+      $('#container')
+        .css('transition', 'transform .6s')
+        .css('transform', 'translate(0, 0) rotate(0) skew(0, 0) scale(1, 1)');
+
+      setTimeout(function(){
+        $('#container').css('transition', '');
+      }, 1000);
     });
 
     $(window).on('resize', function(){
