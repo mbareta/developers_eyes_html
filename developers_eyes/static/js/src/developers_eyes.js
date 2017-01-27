@@ -1,8 +1,11 @@
 /* Javascript for DevelopersEyesXBlock. */
 function DevelopersEyesXBlock(runtime, element, data) {
+    var $element = $(element);
     $(".view-on-map").click(function() {
       parent.postMessage(JSON.stringify({action: 'openMap' }),'*');
     });
+
+    $element.parents('.view-courseware').addClass('noScroll');
 
     $('a').on('click', function(evt) {
       var id = this.id;
