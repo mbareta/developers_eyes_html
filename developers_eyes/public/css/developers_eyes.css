@@ -223,14 +223,19 @@
   background: transparent;
   color: white;
   text-transform: uppercase;
-  padding: 15px;
-  font-size: 1.1em;
-  font-weight: normal;
   cursor: pointer;
   border: 1px solid white;
   z-index: 101;
   box-shadow: 0 0 0 !important;
   text-shadow: 0 0 0 !important;
+
+  padding: 6px 60px;
+  font-size: 14px;
+  font-size: .875rem;
+  font-family: Roboto;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .textimagexblock-wrapper button{
@@ -293,15 +298,19 @@
 }
 
 .textimagexblock-wrapper .header-text {
-  font-size: 54px !important;
   font-weight: 100;
   color: white !important;
   padding: 0;
   text-align: left;
   left: 14%;
-  top: 10%;
   position: relative;
   margin: 0 !important;
+  font-family: Lora;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 54px;
+  font-size: 3.375rem;
+  top: 60px;
 }
 
 #panoContainer .header-text{
@@ -372,13 +381,16 @@
 }
 
 .textimagexblock-wrapper .content-text {
-  font-family: sans;
-  font-size: 14px !important;
   line-height: 36px;
   color: white !important;
   text-align: left;
   margin: 0;
   padding: 3em;
+
+  font-family: Hind, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
 }
 
 .textimagexblock-wrapper ol {
