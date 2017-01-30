@@ -31,7 +31,13 @@ class DevelopersEyesXBlock(XBlock, FileUploadMixin):
                           default="Through the developers eyes interactive",
                           scope=Scope.settings,
                           help="This name appears in the horizontal navigation at the top of the page.")
+    
     json_data = String(help="JSON data from excel file", default=None, scope=Scope.content)
+
+    panorama_url = String(display_name="Panorama Image",
+                          default="https://s3.amazonaws.com/mit-cre-assets/background_images/asset-v1%3AedX%2BDemoX%2BDemo_Course%2Btype%40asset%2Bblock%40pano2.jpg",
+                          scope=Scope.settings,
+                          help="Image used in panorama viewer.")
 
     def resource_string(self, path):
         """Handy helper for getting resources from our kit."""
@@ -81,7 +87,8 @@ class DevelopersEyesXBlock(XBlock, FileUploadMixin):
         frag.add_javascript(self.resource_string("static/js/src/developers_eyes.js"))
 
         frag.initialize_js('DevelopersEyesXBlock', {
-            'json_data': self.json_data
+            'json_data': self.json_data,
+            'panorama_url': self.panorama_url
         })
         return frag
 
@@ -113,6 +120,10 @@ class DevelopersEyesXBlock(XBlock, FileUploadMixin):
         if not isinstance(data['thumbnail'], basestring):
             upload = data['thumbnail']
             self.thumbnail_url = self.upload_to_s3('THUMBNAIL', upload.file, block_id, self.thumbnail_url)
+        
+        if not isinstance(data['panorama'], basestring):
+            upload = data['panorama']
+            self.panorama_url = self.upload_to_s3('BACKGROUND', upload.file, block_id, self.panorama_url)
 
         if not isinstance(data['excel'], basestring):
             upload = data['excel']
