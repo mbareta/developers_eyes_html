@@ -23,7 +23,10 @@ function DevelopersEyesXBlock(runtime, element, data) {
             PhotoSphereViewer({
               container: document.getElementById('panoContainer'),
               panorama: data['panorama_url'],
-              navbar: false
+              navbar: [
+                'autorotate', 'zoom'
+              ],
+              fisheye: true
             });
           }
           else if (id === 'investmentPotential') {

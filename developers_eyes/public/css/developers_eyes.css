@@ -67,6 +67,10 @@
   font-size: 1.875rem;
 }
 
+#placemakingPotentialContent .content {
+  height: auto !important;
+}
+
 #streetGrid {
   bottom: 26%;
   left: 29.5%;
@@ -232,6 +236,7 @@
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  border-radius: 0;
 }
 
 .textimagexblock-wrapper button{
@@ -332,6 +337,7 @@
   width: 40%;
   left: 50%;
   top: 70%;
+  z-index: 100;
 }
 
 .textimagexblock-wrapper .main-content {
