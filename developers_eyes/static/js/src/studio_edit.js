@@ -9,6 +9,7 @@ function StudioEdit(runtime, element) {
         data.append('usage_id', $element.data('usage-id'));
         data.append('display_name', $element.find('input[name=display_name]').val());
         data.append('display_description', $element.find('input[name=display_description]').val());
+        data.append('panorama', $element.find('input[name=panorama]')[0].files[0]);
         data.append('thumbnail', $element.find('input[name=thumbnail]')[0].files[0]);
         data.append('excel', $element.find('input[name=excel]')[0].files[0]);
 

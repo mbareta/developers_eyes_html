@@ -22,10 +22,11 @@ function DevelopersEyesXBlock(runtime, element, data) {
           else if(id === 'placemakingPotential') {
             PhotoSphereViewer({
               container: document.getElementById('panoContainer'),
-              panorama: 'http://54.83.196.116:8080/asset-v1:edX+DemoX+Demo_Course+type@asset+block@pano2.jpg',
-              mousemove: false,
-              mousewheel: false,
-              navbar: false
+              panorama: data['panorama_url'],
+              navbar: [
+                'autorotate', 'zoom'
+              ],
+              fisheye: true
             });
           }
           else if (id === 'investmentPotential') {
