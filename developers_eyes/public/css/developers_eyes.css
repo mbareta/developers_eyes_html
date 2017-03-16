@@ -282,7 +282,7 @@
   left: 14%;
   padding: 0;
   height: 55%;
-  width: 72%;
+  width: 75%;
   overflow: auto;
   z-index: 100;
   display: inline-block;
@@ -418,7 +418,7 @@
 .textimagexblock-wrapper .right-side {
   display: inline-block;
   vertical-align: top;
-  width: 45%;
+  width: 40%;
   margin-left: 20px;
 }
 
