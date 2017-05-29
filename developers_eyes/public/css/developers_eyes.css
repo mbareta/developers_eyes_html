@@ -60,6 +60,123 @@
   font-smooth: always;
 }
 
+/* text ease-in */
+@keyframes street-grid-anim {
+  0%   {    
+    opacity: 0;
+  }
+  30% {
+    margin-bottom: -90px;
+    opacity: 0;
+  }
+   
+  100% {
+    margin-bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes place-making-anim {
+  0%   {    
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+    margin-bottom: -90px;
+  }
+   
+  100% {
+    margin-bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes good-bones-anim {
+  0%   {    
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    margin-bottom: -90px;
+  }
+   
+  100% {
+    margin-bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes investment-potential-anim {
+  0%   {    
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+    margin-top: 90px;
+  }
+   
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes high-density-anim{
+  0%   {    
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+    margin-top: 90px;
+  }
+   
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes strat-location-anim {
+  0%   {    
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+    margin-top: 90px;
+  }
+   
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+#streetGrid {  
+  animation: street-grid-anim 3s;
+}
+
+#placemakingPotential {  
+  animation: place-making-anim 3s;
+}
+
+#goodBones {
+  animation: good-bones-anim 3s;
+}
+
+#investmentPotential {
+  animation: investment-potential-anim 3s;
+}
+
+#highDensity {
+  animation: high-density-anim 3s;
+}
+
+#strategicLocation {
+  animation: strat-location-anim 3s;
+}
+
+/* end text ease-in */
+
 #placemakingPotential {
   bottom: 22%;
   left: 10%;
