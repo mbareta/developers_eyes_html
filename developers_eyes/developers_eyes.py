@@ -63,9 +63,6 @@ class DevelopersEyesXBlock(XBlock, FileUploadMixin):
                 self, 'public/css/developers_eyes.css'))
         frag.add_css_url(
             self.runtime.local_resource_url(
-                self, 'public/css/multibar_charts.css'))
-        frag.add_css_url(
-            self.runtime.local_resource_url(
                 self, 'public/css/nvd3.css'))
 
         frag.add_javascript(self.resource_string("static/js/lib/jquery.zoomooz.js"))
