@@ -3,6 +3,8 @@ function DevelopersEyesXBlock(runtime, element, data) {
     var $element = $(element);
     var photoSphereView;
 
+    parent.postMessage(JSON.stringify({action: 'loadMap'}), '*');
+
     $(".view-on-map").click(function () {
         parent.postMessage(JSON.stringify({action: 'openMap'}), '*');
     });
@@ -50,6 +52,8 @@ function DevelopersEyesXBlock(runtime, element, data) {
         setTimeout(function () {
             $('#container').css('transition', '');
         }, 1000);
+
+
     });
 
     $(window).on('resize', function () {
