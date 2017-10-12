@@ -71,6 +71,12 @@ global.initMultibarChart = function (runtime, element, data) {
         $main_container.css('background-image', 'url(' + background_url + ')');
     }
 
+    function setTabForActiveCharts(list_node, sheet, $element) {
+        list_node.className = 'active';
+        setters.setChartsSpecs(charts_specs_data, sheet.name, chart_specifics);
+        generate_chart(sheet, $element);
+    }
+
     /**
      * Generate tabs with charts. Every tab will generate new graph using
      * generate_chart function.
@@ -83,18 +89,14 @@ global.initMultibarChart = function (runtime, element, data) {
 
         workbook.forEach(function (sheet) {
             var list_node = document.createElement("LI");
-            var text_node_wrapper = document.createElement("SPAN");
+            var text_node_wrapper = document.createElement("BUTTON");
             list_node.onclick = function () {
                 clearActiveTab(sheet.name);
-                list_node.className = "active";
-                setters.setChartsSpecs(charts_specs_data, sheet.name, chart_specifics);
-                generate_chart(sheet, $element);
+                setTabForActiveCharts(list_node, sheet, $element);
             };
             // generate default (first) graph
             if (firstIteration) {
-                list_node.className = "active";
-                setters.setChartsSpecs(charts_specs_data, sheet.name, chart_specifics);
-                generate_chart(sheet, $element);
+                setTabForActiveCharts(list_node, sheet, $element);
             }
             // append tab div
             var text_node = document.createTextNode(sheet.name);
