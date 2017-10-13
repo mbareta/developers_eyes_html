@@ -199,6 +199,7 @@ global.initMultibarChart = function (runtime, element, data) {
 
                 chart.yAxis
                     .tickFormat(tickFormat)
+                    .showMaxMin(false)
                     .ticks(numberOfYticks);
 
                 chart.dispatch.on('renderEnd', function () {
@@ -220,14 +221,17 @@ global.initMultibarChart = function (runtime, element, data) {
                     .attr("text-anchor", "middle")
                     .classed("y-title", true)
                     .text(chart_specifics.y_title);
-                d3nv_y_axis.append("text")
+
+                var d3NvAxisContainer = d3.select('.nvd3.nv-wrap.nv-axis');
+                d3NvAxisContainer
+                    .append("text")
                     .attr("text-anchor", "middle")
                     .classed("x-title", true)
                     .text(chart_specifics.x_title);
 
                 // add footnote
                 if (general_charts_data.source_footnote) {
-                    d3nv_y_axis.append("text")
+                    d3NvAxisContainer.append("text")
                         .attr("text-anchor", "middle")
                         .classed("footnote", true)
                         .text(general_charts_data.source_footnote);
@@ -485,7 +489,7 @@ function updateWrap(className, d3graph_container) {
 function updateXYtitlesPosition(width, height, file_name, d3graph_container) {
     var delta = getResolution() < 1400 ? 15 : 0;
     d3graph_container.select('.x-title')
-        .attr('transform', 'translate(' + ((width / 2) - 10) + ',' + ((height + 45) - delta) + ')');
+        .attr('transform', 'translate(' + ((width / 2) - 10) + ', 60)');
 
     var x = (file_name === 'IP') ? -70 : -40;
     d3graph_container.select('.y-title')
@@ -559,7 +563,7 @@ function circlesToRectangles(d3graph_container) {
 
 function updateFootnotePosition(width, height, d3graph_container) {
     d3graph_container.select('.footnote')
-        .attr('transform', 'translate(' + ((width / 10) + 30) + ',' + (height + 90) + ')');
+        .attr('transform', 'translate(' + ((width / 10) + 30) + ', 90)');
 }
 
 module.exports = {

@@ -141,7 +141,7 @@ function updateWrap(className, d3graph_container) {
 function updateXYtitlesPosition(width, height, file_name, d3graph_container) {
     var delta = getResolution() < 1400 ? 15 : 0;
     d3graph_container.select('.x-title')
-        .attr('transform', 'translate(' + ((width / 2) - 10) + ',' + ((height + 45) - delta) + ')');
+        .attr('transform', 'translate(' + ((width / 2) - 10) + ', 60)');
 
     var x = (file_name === 'IP') ? -70 : -40;
     d3graph_container.select('.y-title')
@@ -215,7 +215,7 @@ function circlesToRectangles(d3graph_container) {
 
 function updateFootnotePosition(width, height, d3graph_container) {
     d3graph_container.select('.footnote')
-        .attr('transform', 'translate(' + ((width / 10) + 30) + ',' + (height + 90) + ')');
+        .attr('transform', 'translate(' + ((width / 10) + 30) + ', 90)');
 }
 
 module.exports = {

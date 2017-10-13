@@ -197,6 +197,7 @@ global.initMultibarChart = function (runtime, element, data) {
 
                 chart.yAxis
                     .tickFormat(tickFormat)
+                    .showMaxMin(false)
                     .ticks(numberOfYticks);
 
                 chart.dispatch.on('renderEnd', function () {
@@ -218,14 +219,17 @@ global.initMultibarChart = function (runtime, element, data) {
                     .attr("text-anchor", "middle")
                     .classed("y-title", true)
                     .text(chart_specifics.y_title);
-                d3nv_y_axis.append("text")
+
+                var d3NvAxisContainer = d3.select('.nvd3.nv-wrap.nv-axis');
+                d3NvAxisContainer
+                    .append("text")
                     .attr("text-anchor", "middle")
                     .classed("x-title", true)
                     .text(chart_specifics.x_title);
 
                 // add footnote
                 if (general_charts_data.source_footnote) {
-                    d3nv_y_axis.append("text")
+                    d3NvAxisContainer.append("text")
                         .attr("text-anchor", "middle")
                         .classed("footnote", true)
                         .text(general_charts_data.source_footnote);
