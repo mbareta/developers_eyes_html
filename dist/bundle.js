@@ -3,11 +3,8 @@
 var utils = require('./utils.js');
 var setters = require('./setters.js');
 
-global.initMultibarChart = function (runtime, element, data) {
-    // edx bug fix
-    element = Array.isArray(element) ? element[0] : element;
+global.initMultibarChart = function ($element, data) {
     var isFirstLoad = true;
-    var $element = $(element);
 
     // If the title exists, it means charts were rendered so we will not render them again, just let the user to continue where he left of.
     if($element.find('#chart-title').text().length > 0) { return; }
@@ -327,9 +324,11 @@ function setChartsSpecs(charts_specs_data, sheet_name, chart_specifics) {
     var _keys = charts_specs_data['rows'][0];
     var _length = _keys.length;
 
+
     // Other arrays are values
-    for (var i = 1; i < _length - 1; i++) {
+    for (var i = 1; i < _length - 2; i++) {
         var _values = charts_specs_data['rows'][i];
+        if(_values === undefined) {debugger;}
         for (var j = 0; j < _values.length; j++) {
             chart_specifics['' + _keys[j] + ''] = _values[j];
         }
